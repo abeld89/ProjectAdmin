@@ -2,14 +2,36 @@ package com.tenisax.persistence.service;
 
 import java.util.List;
 
+import com.tenisax.persistence.dto.UserDTO;
 import com.tenisax.persistence.exception.UserNotFound;
-import com.tenisax.persistence.model.User;
 
 public interface UserService {
 	
-	public User create(User user);
-	public User delete(int id) throws UserNotFound;
-	public List<User> findAll();
-	public User update(User user) throws UserNotFound;
-	public User findById(int id);
+	/**
+	 * Guarda o actualiza en BBDD el usuario pasado por parámetro
+	 * @param user
+	 * @return
+	 * @throws UserNotFound
+	 */
+	UserDTO saveUser(UserDTO user) throws UserNotFound;
+	
+	/**
+	 * Borra de BBDD el usuario pasado por parámetro
+	 * @param id
+	 * @throws UserNotFound
+	 */
+	void delete(UserDTO user) throws UserNotFound;
+	
+	/**
+	 * Devuelve todos los usuarios registrados
+	 * @return
+	 */
+	List<UserDTO> findAll();
+	
+	/**
+	 * Devuelve el usuario pasado por parámetro
+	 * @param id
+	 * @return
+	 */
+	UserDTO findById(Long id);
 }

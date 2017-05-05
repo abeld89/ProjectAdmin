@@ -2,8 +2,17 @@ package com.tenisax.persistence.exception;
 
 public class UserNotFound extends Exception{
 	
-	private String userNotFound = "User no encontrado";
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private String userNotFound = "Excepción controlada";
 
+	public UserNotFound(String error){
+		this.userNotFound = error;
+	}
+	
 	public String getUserNotFound() {
 		return userNotFound;
 	}

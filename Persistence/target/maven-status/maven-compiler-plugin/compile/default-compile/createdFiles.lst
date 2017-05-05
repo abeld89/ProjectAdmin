@@ -1,1 +1,9 @@
-com\tenisax\persistence\model\User.class
+com\tenisax\persistence\service\impl\UserServiceImpl.class
+com\tenisax\persistence\mapper\annotation\MappingId.class
+com\tenisax\persistence\dto\UserDTO.class
+com\tenisax\persistence\mapper\Mapper.class
+com\tenisax\persistence\exception\UserNotFound.class
+com\tenisax\persistence\dao\UserDAO.class
+com\tenisax\persistence\mapper\annotation\InspectInside.class
+com\tenisax\persistence\entity\User.class
+com\tenisax\persistence\service\UserService.class
